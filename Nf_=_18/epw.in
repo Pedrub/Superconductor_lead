@@ -1,0 +1,67 @@
+--
+&inputepw
+  prefix      = 'pb',
+  amass(1)    = 207.2
+  outdir      = './'
+
+  elph        = .true.
+  epbwrite    = .true.
+  epbread     = .false.
+
+  epwwrite    = .true.
+  epwread     = .false.
+
+  nbndsub     =  4
+  bands_skipped = 'exclude_bands = 1-5'
+
+  wannierize  = .true.
+  num_iter    = 300
+  dis_win_max = 21
+  dis_win_min = -3
+  dis_froz_min= -3
+  dis_froz_max= 13.5
+  proj(1)     = 'Pb:sp3'
+
+  wdata(1) = 'bands_plot = .true.'
+  wdata(2) = 'begin kpoint_path'
+  wdata(3) = 'G 0.00 0.00 0.00 X 0.00 0.50 0.50'
+  wdata(4) = 'X 0.00 0.50 0.50 W 0.25 0.50 0.75'
+  wdata(5) = 'W 0.25 0.50 0.75 L 0.50 0.50 0.50'
+  wdata(6) = 'L 0.50 0.50 0.50 K 0.375 0.375 0.75'
+  wdata(7) = 'K 0.375 0.375 0.75 G 0.00 0.00 0.00'
+  wdata(8) = 'G 0.00 0.00 0.00 L 0.50 0.50 0.50'
+  wdata(9) = 'end kpoint_path'
+  wdata(10) = 'bands_plot_format = gnuplot'
+
+  iverbosity  = 0
+
+  elecselfen  = .false. 
+  phonselfen  = .true.
+
+
+  fsthick     = 6 ! eV
+  temps       = 0.075 ! K
+  degaussw    = 0.05 ! eV
+
+  a2f         = .true.
+
+  dvscf_dir   = '../phonons/save'
+
+  nkf1 = 18
+  nkf2 = 18
+  nkf3 = 18
+
+  nqf1 = 18
+  nqf2 = 18
+  nqf3 = 18
+
+  nk1         = 10
+  nk2         = 10
+  nk3         = 10
+
+  nq1         = 5
+  nq2         = 5
+  nq3         = 5
+
+ /
+
