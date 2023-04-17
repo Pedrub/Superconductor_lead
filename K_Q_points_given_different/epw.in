@@ -38,8 +38,8 @@
   elecselfen  = .false. 
   phonselfen  = .true.
 
-
-  fsthick     = 0.5 ! eV
+  fermi_energy=11.5817
+  fsthick     = 0.2 ! eV
   temps       = 0.075 ! K
   degaussw    = 0.05 ! eV
 
